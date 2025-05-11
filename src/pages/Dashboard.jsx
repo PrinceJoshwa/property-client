@@ -1,4 +1,4 @@
-import { FaUser } from 'react-icons/fa';
+// import { FaUser } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { isAuthenticated, getUserData, logout } from '../utils/auth';
@@ -31,7 +31,7 @@ function Dashboard() {
         <div className="p-4">
           <div className="flex items-center gap-2 mb-8">
             <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-              <FaUser className="text-white" />
+              {/* <FaUser className="text-white" /> */}
             </div>
             <div>
               <h1 className="font-bold">{userData?.name || 'Resume Builder'}</h1>
