@@ -8,10 +8,11 @@ import { isAuthenticated } from "./utils/auth"
 const ProtectedRoute = ({ children }) => {
   return isAuthenticated() ? children : <Navigate to="/" />
 }
+const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || '236145537195-si0q353gbg5c08s0dfvfbssssug7ivhk.apps.googleusercontent.com'
 
 function App() {
   return (
-    <GoogleOAuthProvider clientId="236145537195-si0q353gbg5c08s0dfvfbssssug7ivhk.apps.googleusercontent.com">
+    <GoogleOAuthProvider clientId={googleClientId}>
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
